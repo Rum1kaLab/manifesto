@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="labs" fetch="https://github.com" />
-    <project path="device/google/coral" name="Rum1kaLab/device_google_coral" remote="labs" revision="afterlife-a16" />
+    <remote name="gh" fetch="https://github.com" />
+    <remote name="gl" fetch="https://gitlab.com" />  
 
-    <project path="vendor/google/coral" name="Rum1kaLab/vendor_google_coral" remote="labs" revision="lineage-23.2" />
+    <!-- Common and extra repos -->
+    <project name="LineageOS/android_device_google_gs-common" path="device/google/gs-common" revision="lineage-23.2" remote="gh" />
+    
+    <project name="crdroidandroid/proprietary_vendor_google_camera" path="vendor/google/camera" revision="16.0" remote="gl" />
 
-    <project path="kernel/google/msm-4.14" name="Rum1kaLab/kernel_google_msm-4.14" remote="labs" revision="lineage-23.2" clone-depth="1" />
+    <!-- Google Pixel 4 Series -->
+    <project path="device/google/coral" name="Rum1kaLab/device_google_coral" remote="gh" revision="afterlife-a16" />
 
-    <project path="packages/apps/ElmyraService" name="LineageOS/android_packages_apps_ElmyraService" remote="labs" revision="lineage-23.2" />
+    <project path="vendor/google/coral" name="Rum1kaLab/vendor_google_coral" remote="gh" revision="lineage-23.2" clone-depth="1" />
+
+    <project path="kernel/google/msm-4.14" name="Rum1kaLab/kernel_google_msm-4.14" remote="gh" revision="lineage-23.2" clone-depth="1" />
+
+    <project path="packages/apps/ElmyraService" name="LineageOS/android_packages_apps_ElmyraService" remote="gh" revision="lineage-23.2" />
+
+     <!-- Replace some existing repos -->
+    <remove-project name="vendor_gms16" />
+    <project name="ivz-prjct/vendor-gms-afl" path="vendor/gms" revision="16-qpr2" remote="gl" clone-depth="1" />
+    <remove-project name="hardware_google_pixel" />
+    <project name="LineageOS/android_hardware_google_pixel" path="hardware/google/pixel" revision="lineage-23.2" remote="gh" clone-depth="1" />
+    <remove-project name="platform/hardware/google/pixel-sepolicy" />
+    <project name="LineageOS/android_hardware_google_pixel-sepolicy" path="hardware/google/pixel-sepolicy" revision="lineage-23.2" remote="gh" clone-depth="1" />
 
 </manifest>
