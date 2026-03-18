@@ -10,11 +10,9 @@
 
     <!-- Google Pixel 4 Series -->
     <project path="device/google/coral" name="Rum1kaLab/device_google_coral" remote="gh" revision="afterlife-a16" />
-
     <project path="vendor/google/coral" name="Rum1kaLab/vendor_google_coral" remote="gh" revision="lineage-23.2" clone-depth="1" />
-
+    <project path="vendor/google/flame" name="TheMuppets/proprietary_vendor_google_flame" remote="gh" revision="lineage-23.2" clone-depth="1" />
     <project path="kernel/google/msm-4.14" name="Rum1kaLab/kernel_google_msm-4.14" remote="gh" revision="lineage-23.2" clone-depth="1" />
-
     <project path="packages/apps/ElmyraService" name="LineageOS/android_packages_apps_ElmyraService" remote="gh" revision="lineage-23.2" />
 
      <!-- Replace some existing repos -->
